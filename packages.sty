@@ -1,0 +1,84 @@
+% === LANGUAGE & FONTS ===
+%
+\usepackage[english]{babel}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{newtxtext, newtxmath}
+
+
+% === HEADERS & SPACING ===
+%
+% Fancy headers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+% Set spacing
+\usepackage{setspace}
+\doublespacing
+
+
+% === HYPERLINKS ===
+%
+\usepackage{url}  % Nice URL typesetting and line breaks
+\urlstyle{rm}  % Roman URL font style
+
+% To include a link in your pdf use \href{URL}{Text to be displayed}.
+% If your display text is the URL, you could use the \url{} command.
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true, % Colours links instead of ugly boxes
+  urlcolor=blue,   % Colour for external hyperlinks
+  linkcolor=blue,  % Colour of internal links
+  citecolor=blue   % Colour of citation links
+}
+
+
+% === UNITS ===
+%
+% SI Units package
+% Customise this depending on your field
+\usepackage{siunitx}
+\sisetup{
+  range-units=single,
+  separate-uncertainty=true,
+  multi-part-units=single
+}
+
+% Examples of custom units commonly used in astronomy
+%
+% \DeclareSIUnit\year{yr}
+% \DeclareSIUnit\solarmass{\ensuremath{\mathrm{M}_\odot}}
+% \DeclareSIUnit\solarradius{\ensuremath{\mathrm{R}_\odot}}
+% \DeclareSIUnit\solarluminosity{\ensuremath{\mathrm{L}_\odot}}
+% \DeclareSIUnit\parsec{pc}
+% \DeclareSIUnit\dex{dex}
+% \DeclareSIUnit\mag{mag}
+% \DeclareSIUnit\arcsec{as}
+
+
+% === CITATIONS ===
+%
+\usepackage[%
+  style=authoryear,
+  natbib=true
+  ]{biblatex}
+\usepackage{csquotes}  % When loading babel with biblatex
+
+
+% === OTHER PACKAGES ===
+%
+\usepackage{amsmath}
+\usepackage{emptypage}  % Make skipped pages blank
+\usepackage{tocbibind}  % Add TOC to TOC
+\usepackage{lipsum}  % For placeholder text
+
+\usepackage[acronym,toc]{glossaries}
+\makeglossaries
+
+
+% === NEW COMMANDS ===
+%
+% Define your new commands here, e.g.
+%
+% \newcommand{\dd}{\mathrm{d}}  % For the derivative 'd'
