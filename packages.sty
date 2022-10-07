@@ -11,7 +11,7 @@
 %
 % This work consists of the files uobthesis.cls, packages.sty, and thesis.tex.
 %
-% === LANGUAGE & FONTS ===
+%% LANGUAGE & FONTS
 %
 \usepackage[english]{babel}
 
@@ -19,8 +19,10 @@
 \usepackage[T1]{fontenc}
 \usepackage{newtxtext, newtxmath}
 
+\usepackage{csquotes}  % When loading babel with biblatex
 
-% === HEADERS & SPACING ===
+
+%% HEADERS & SPACING
 %
 % Fancy headers
 \usepackage{fancyhdr}
@@ -31,7 +33,7 @@
 \doublespacing
 
 
-% === HYPERLINKS ===
+%% HYPERLINKS
 %
 \usepackage{url}  % Nice URL typesetting and line breaks
 \urlstyle{rm}  % Roman URL font style
@@ -47,7 +49,7 @@
 }
 
 
-% === UNITS ===
+%% UNITS
 %
 % SI Units package
 % Customise this depending on your field
@@ -70,16 +72,24 @@
 % \DeclareSIUnit\arcsec{as}
 
 
-% === CITATIONS ===
+%% CITATIONS
 %
 \usepackage[%
   style=authoryear,
   natbib=true
   ]{biblatex}
-\usepackage{csquotes}  % When loading babel with biblatex
+\bibliography{references}  % Change if different filename is used for the .bib file
 
 
-% === OTHER PACKAGES ===
+%% FIGURES & TABLES
+%
+\usepackage{caption}
+
+\usepackage{longtable}
+\usepackage{booktabs}
+
+
+%% OTHER PACKAGES
 %
 \usepackage{amsmath}
 \usepackage{emptypage}  % Make skipped pages blank
@@ -90,7 +100,7 @@
 \makeglossaries
 
 
-% === NEW COMMANDS ===
+%% NEW COMMANDS
 %
 % Define your new commands here, e.g.
 %
