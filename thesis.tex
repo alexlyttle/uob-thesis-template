@@ -1,7 +1,18 @@
 % thesis.tex
 %
+% Copyright 2022 Alexander Lyttle.
 %
-% === PREAMBLE ===
+% This work may be distributed and/or modified under the conditions of the
+% LaTeX Project Public License (LPPL) version 1.3 or later.
+%
+% The latest version of this license is in
+% https://www.latex-project.org/lppl.txt and version 1.3 or later is part of
+% all distributions of LaTeX version 2005/12/01 or later.
+%
+% This work consists of the files uobthesis.cls, packages.sty, and thesis.tex.
+%
+%
+%% PREAMBLE ===================================================================
 %
 % UoB recommends A4 paper and a font size of 12pt
 \documentclass[a4paper,12pt]{uobthesis}
@@ -9,7 +20,7 @@
 % Packages and setup are in packages.sty
 \usepackage{packages}
 
-% Add your details
+% Add your details here
 \author{Author Name}
 \title{Thesis Title}
 \group{Your Research Group}
@@ -27,47 +38,42 @@
 % Add any additional details here or at the bottom of packages.sty
 
 
-% === DOCUMENT ===
+%% DOCUMENT ===================================================================
 %
 \begin{document}
 
   \maketitle  % Title page
 
-  % === FRONT MATTER ===
-  %
   \frontmatter
 
+  %% FRONT MATTER -------------------------------------------------------------
+  %
   % Edit the following files or add more if applicable
   \include{frontmatter/abstract}
   \include{frontmatter/dedication}  % Dedication is optional
   \include{frontmatter/acknowledgements}
 
+  %% CONTENTS -----------------------------------------------------------------
   \tableofcontents
   \listoffigures
   \listoftables
   \printglossary[type=\acronymtype,title={List of Acronyms}]
   \printglossary[title={List of Terms}]
 
-
-  % === MAIN MATTER ===
-  %
   \mainmatter
 
-
-  % --- CHAPTERS ---
+  %% CHAPTERS -----------------------------------------------------------------
   %
   % Add your chapters here
   \include{chapters/introduction}
   \include{chapters/example}
   \include{chapters/conclusion}
   
-
-  % --- BIBLIOGRAPHY ---
+  %% BIBLIOGRAPHY -------------------------------------------------------------
   %
   \printbibliography[title=References,heading=bibintoc]
 
-
-  % --- APENDICES ---
+  %% APENDICES ----------------------------------------------------------------
   %
   \appendix
 
