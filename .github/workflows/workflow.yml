@@ -27,7 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Generate preview image from PDF
-        run: convert -density 150 -trim "thesis.pdf[0]" -quality 100 -background white -flatten -sharpen 0x1.0 preview.png
+        run: pdftoppm -singlefile -png thesis.pdf preview
 
       - name: Add and Commit
         uses: EndBug/add-and-commit@v9.1.0
