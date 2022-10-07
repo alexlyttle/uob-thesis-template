@@ -1,0 +1,77 @@
+% thesis.tex
+%
+%
+% === PREAMBLE ===
+%
+% UoB recommends A4 paper and a font size of 12pt
+\documentclass[a4paper,12pt]{uobthesis}
+
+% Packages and setup are in packages.sty
+\usepackage{packages}
+
+% Add your details
+\author{Author Name}
+\title{Thesis Title}
+\group{Your Research Group}
+\school{Your School}
+\college{Your College}
+\submitted{March}{2022}  % Change this to the month you submit your thesis
+
+% Add bibliography resource
+\addbibresource{references.bib}
+
+% Add acronyms and glossary
+\input{acronyms}
+\input{glossary}
+
+% Add any additional details here or at the bottom of packages.sty
+
+
+% === DOCUMENT ===
+%
+\begin{document}
+
+  \maketitle  % Title page
+
+  % === FRONT MATTER ===
+  %
+  \frontmatter
+
+  % Edit the following files or add more if applicable
+  \include{frontmatter/abstract}
+  \include{frontmatter/dedication}  % Dedication is optional
+  \include{frontmatter/acknowledgements}
+
+  \tableofcontents
+  \listoffigures
+  \listoftables
+  \printglossary[type=\acronymtype,title={List of Acronyms}]
+  \printglossary[title={List of Terms}]
+
+
+  % === MAIN MATTER ===
+  %
+  \mainmatter
+
+
+  % --- CHAPTERS ---
+  %
+  % Add your chapters here
+  \include{chapters/introduction}
+  \include{chapters/example}
+  \include{chapters/conclusion}
+  
+
+  % --- BIBLIOGRAPHY ---
+  %
+  \printbibliography[title=References,heading=bibintoc]
+
+
+  % --- APENDICES ---
+  %
+  \appendix
+
+  % Add your appendices here
+  \include{appendices/example}
+
+\end{document}
