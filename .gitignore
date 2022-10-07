@@ -278,3 +278,6 @@ TSWLatexianTemp*
 
 # Latexmk settings
 .latexmkrc
+
+# MacOS
+.DS_Store
