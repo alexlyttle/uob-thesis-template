@@ -68,7 +68,7 @@
       \@group\\
       School of \@school\\
       College of \@college\\
-      University of Birmignham\\
+      University of Birmingham\\
       \@month~\@year
     \end{flushright}
   \end{titlepage}
