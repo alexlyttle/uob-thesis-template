@@ -1,5 +1,13 @@
 \chapter{Example Chapter}
 
+This chapter covers some basic usage of the packages bundled with this template.
+
+\section{Citations and References}
+
+Here is an example citation in parentheses \citep{einstein} or we can just refer to \citet{dirac} in text.
+
+\section{Figures and Tables}
+
 \Glspl{star} spend most of their life on the \acrfull{ms}. The \acrshort{ms} was discovered when the \gls{luminosity} of many stars were plot against their spectral class. We can see this in Figure \ref{fig:example}. 
 
 \begin{figure}[t]
@@ -9,6 +17,13 @@
   \label{fig:example}
 \end{figure}
 
-Here is an example citation in parentheses \citep{einstein} or we can just refer to \citet{dirac} in text.
+Table \ref{tab:example}.
+
+\begin{table}
+  \centering
+  \caption[Short version of caption]{Table}
+  \label{tab:example}
+  \input{tables/example}
+\end{table}
 
 \lipsum[17-18]
