@@ -39,6 +39,7 @@
   }{geometry}
 \RequirePackage{geometry}
 
+
 % === TITLE PAGE ===
 
 \RequirePackage{graphicx}
@@ -96,19 +97,38 @@
   \end{center}
 }
 
+
 % === FRONTMATTER ===
+
+\newcommand*{\abstract}[1]{\def\@abstract{#1}}
+\newcommand*{\dedication}[1]{\def\@dedication{#1}}
+\newcommand*{\acknowledgements}[1]{\def\@acknowledgements{#1}}
+
+\dedication{\empty}  % default value
 
 \newcommand*{\abstractname}{Abstract}
 \newcommand*{\thanksname}{Acknowledgements}
 
-% === ENVIRONMENTS ===
+\newcommand*{\makefrontmatter}{%
+  % Abstract
+  \chapter*{\abstractname}
+  \addcontentsline{toc}{chapter}{\abstractname}
+  \@abstract
+  \cleardoublepage
 
-% Dedication
-\newenvironment{dedication}{%
-  \thispagestyle{empty}
-  \hspace{0pt}
-  \vfill
-}{%
-  \vfill
-  \hspace{0pt}
+  % Dedication
+  \ifx\@dedication\empty\else
+    \thispagestyle{empty}
+    \hspace{0pt}
+    \vfill
+    \@dedication
+    \vfill
+    \hspace{0pt}
+    \cleardoublepage
+  \fi
+
+  % Acknowledgements
+  \chapter*{\thanksname}
+  \addcontentsline{toc}{chapter}{\thanksname}
+  \@acknowledgements
 }

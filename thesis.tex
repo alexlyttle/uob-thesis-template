@@ -17,9 +17,27 @@
 % UoB recommends A4 paper and a font size of 12pt
 \documentclass[a4paper,12pt]{uobthesis}
 
+
+%% PACKAGES -------------------------------------------------------------------
+%
 % Packages and setup are in packages.sty
 \usepackage{packages}
 
+% Add any additional packages below or at the bottom of packages.sty
+
+
+%% RESOURCES ------------------------------------------------------------------
+%
+% Add bibliography resource files
+\addbibresource{references.bib}
+
+% Add acronyms and glossary files
+\input{acronyms}
+\input{glossary}
+
+
+%% DETAILS --------------------------------------------------------------------
+%
 % Add your details here
 \author{Author Name}
 \title{Thesis Title}
@@ -28,14 +46,20 @@
 \college{Your College}
 \submitted{March}{2022}  % Change this to the month you submit your thesis
 
-% Add bibliography resource files
-\addbibresource{references.bib}
 
-% Add acronyms and glossary files
-\input{acronyms}
-\input{glossary}
+%% DEDICATION -----------------------------------------------------------------
+%
+\dedication{Dedicated to my family.}  % Optional dedication, edit this or comment out if not appropriate
 
-% Add any additional details here or at the bottom of packages.sty
+
+%% ABSTRACT -------------------------------------------------------------------
+%
+\abstract{\lipsum[1-2]}
+
+
+%% ACKNOWLEDGEMENTS -----------------------------------------------------------
+%
+\acknowledgements{\lipsum[3-6]}
 
 
 %% DOCUMENT ===================================================================
@@ -47,11 +71,7 @@
   \frontmatter
 
   %% FRONT MATTER -------------------------------------------------------------
-  %
-  % Edit the following files or add more if applicable
-  \include{frontmatter/abstract}
-  \include{frontmatter/dedication}  % Dedication is optional
-  \include{frontmatter/acknowledgements}
+  \makefrontmatter  % Adds abstract, dedication and acknowledgements
 
   %% CONTENTS -----------------------------------------------------------------
   \tableofcontents
