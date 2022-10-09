@@ -44,6 +44,7 @@
 
 \RequirePackage{graphicx}
 
+\newcommand*{\logo}[1]{\def\@logo{#1}}
 \newcommand*{\group}[1]{\def\@group{#1}}
 \newcommand*{\school}[1]{\def\@school{#1}}
 \newcommand*{\college}[1]{\def\@college{#1}}
@@ -55,8 +56,12 @@
     \noindent
 
     \begin{center}
-      \includegraphics[width=90mm]{uob-logo.eps}      
-      
+      \ifdefined\@logo
+        \includegraphics[width=90mm]{\@logo}%
+      \else
+        \hspace{0pt}%
+      \fi
+
       \vfill
 
       \Large\MakeUppercase{\@title}
@@ -104,8 +109,6 @@
 \newcommand*{\dedication}[1]{\def\@dedication{#1}}
 \newcommand*{\acknowledgements}[1]{\def\@acknowledgements{#1}}
 
-\dedication{\empty}  % default value
-
 \newcommand*{\abstractname}{Abstract}
 \newcommand*{\thanksname}{Acknowledgements}
 
@@ -117,7 +120,7 @@
   \cleardoublepage
 
   % Dedication
-  \ifx\@dedication\empty\else
+  \ifdefined\@dedication
     \thispagestyle{empty}
     \hspace{0pt}
     \vfill

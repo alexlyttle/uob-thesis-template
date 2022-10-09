@@ -49,6 +49,7 @@ The `uobthesis` class provides the following commands in addition to the usual L
 * `\school` -- the name of your school, e.g. `Physics and Astronomy`
 * `\college` -- the name of your college, e.g. `Engineering and Physical Sciences`
 * `\submitted` -- the month name and year in which the thesis is submitted
+* `\logo` -- path to the UoB logo to display on the title page (optional)
 * `\abstract` -- the thesis abstract
 * `\acknowledgements` -- the thanks and acknowledgements
 * `\dedication` -- the message of dedication (optional)
