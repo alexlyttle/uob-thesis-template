@@ -15,7 +15,21 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
+  # This workflow contains two jobs: test and build
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: xu-cheng/texlive-action/full@v1
+        with:
+          run: |
+            pdflatex thesis
+            biber thesis
+            makeglossaries thesis
+            pdflatex thesis
+            pdflatex thesis
+
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
@@ -28,7 +42,7 @@ jobs:
       - name: Install poppler-utils
         run: sudo apt install poppler-utils
 
-      # Runs a single command using the runners shell
+      # Generate preview image of PDF using poppler
       - name: Generate preview image from PDF
         run: pdftoppm -singlefile -png thesis.pdf preview
 
@@ -38,4 +52,6 @@ jobs:
           author_name: Alex Lyttle
           author_email: a.j.lyttle@outlook.com
           message: 'Update preview file'
+      
+  
 
