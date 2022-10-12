@@ -16,21 +16,23 @@ This chapter covers some basic usage of the packages bundled with this template.
 
 \section{Citations and References}
 
-This template uses \texttt{biblatex} to produce the bibliography. The citation style for this template is author-year and it uses \texttt{natbib} to provide in-text and parenthesis citation styles with additional commands \texttt{citep} and \texttt{citet}. Go to \texttt{packages.sty} to customise these options to suit your preferred citation style. Otherwise, here are some examples for the chosen style in this template. Here is an example citation in parentheses \citep{einstein} or we can just refer to \citet{dirac} in text. Notice that just using the basic \texttt{cite} command produces the same as \texttt{citep} without parentheses, \cite{knuth-fa}. Citations in parenthesis can have info before and after \citep[e.g.][chap. 2]{dirac}. You can cite multiple sources in parentheses \citep{einstein,knuth-fa,dirac} or in text \citet{einstein,dirac,knuth-fa}. Notice that they are put into ascending date order.
+This template uses \texttt{biblatex} to produce the bibliography. The citation style for this template is author-year. The \texttt{natbib} option is used to provide in-text and parenthesis citation styles with the additional commands \texttt{citep} and \texttt{citet}. Go to \texttt{packages.sty} to customise these options to suit your preferred citation style. Otherwise, here are some examples for the chosen style in this template. 
+
+Here is an example citation in parentheses \citep{einstein} or we can just refer to \citet{einstein} in text. Notice that just using the basic \texttt{cite} command produces the same as \texttt{citep} without parentheses -- \cite{knuth-fa}. Citations in parenthesis can have info before and after \citep[e.g.][chap. 2]{dirac}. You can cite multiple sources in parentheses \citep{einstein,knuth-fa,dirac} or in text -- \citet{einstein,dirac,knuth-fa}. Notice that the citations are sorted by publication year.
 
 Use the \texttt{href} package to create external links, but be aware that this won't translate well in print. For example, see the GitHub repository for this template \href{https://github.com/alexlyttle/uob-thesis-template}{here}. To make the reference print-friendly, you could put the full address in text with the \texttt{url} command (\url{https://github.com/alexlyttle/uob-thesis-template}) or in a footnote\footnote{\url{https://github.com/alexlyttle/uob-thesis-template}}.
 
 \section{Glossary Usage}
 
-This template uses the \texttt{glossaries} package. Each glossary item should be defined in the document preamble. Here, these are separated into the files \texttt{glossary/acronyms.tex} and \texttt{glossary/terms.tex} for your convenience. To refer to glossary items, there are several commands. For example, \texttt{\textbackslash gls\{<term\_name>\}} will reference the glossary item for \texttt{<term\_name>}. Acronyms should first be referenced with \texttt{\textbackslash acrfull\{ms\}} and subsequently with \texttt{\textbackslash acrshort\{ms\}}. Some example usage is given in Section \ref{sec:figandtab}.
+This template uses the \texttt{glossaries} package. Each glossary item should be defined in the document preamble. Here, these are separated into the files \texttt{glossary/acronyms.tex} and \texttt{glossary/terms.tex} for your convenience. To refer to glossary items, there are several commands. For example, \texttt{\textbackslash gls\{<term\_name>\}} will reference the glossary item for \texttt{<term\_name>}. Acronyms should first be referenced with \texttt{\textbackslash acrfull\{<acronym>\}} and subsequently with \texttt{\textbackslash acrshort\{<acronym>\}}. Some example usage is given in Section \ref{sec:figandtab}.
 
 \section{Quantities and Units}
 
-Quantities and their units can be formatted consistently with the \texttt{siunitx} package. This can be configured in \texttt{packages.sty}. For example, large numbers are formatted like this, \num{123456789}. Quantities with units are formatted like this, \SI{50}{\meter\per\second\squared}, and can be used in math mode $\nu = \SI{8}{\micro\hertz}$. Uncertainties can be included using the parentheses shorthand, \SI{102(3)}{\meter\per\second}. Units can be given on their own, for example \si{\centi\meter}. Custom units may also be defined in the preamble. The SI unit formats may be configured with the \texttt{\textbackslash sisetup} command.
+Quantities and their units can be formatted consistently with the \texttt{siunitx} package. This is configured in \texttt{packages.sty}. For example, large numbers are formatted like this, \num{12345.6789}. Quantities with units are formatted like this, \SI{50}{\meter\per\second\squared}, and can be used in math mode, $\nu = \SI{8}{\micro\hertz}$. Uncertainties can be included using the parentheses shorthand, \SI{102(3)}{\meter\per\second}. Units can be given on their own, for example, \si{\centi\meter}. Custom units may also be defined in the preamble. The SI unit formats may be configured with the \texttt{\textbackslash sisetup} command in the preamble.
 
 \section{Figures and Tables}\label{sec:figandtab}
 
-\Glspl{star} spend most of their life on the \acrfull{ms}. The \acrshort{ms} was discovered when the \gls{luminosity} of many stars were plot against their spectral class. We can see this in Figure \ref{fig:example}. For good print quality, figures should be produced with at least 300 \acrfull{dpi}. To consistently achieve this, avoid resizing your images and produce them to this specification. Using A4 paper size with the default document class margins, the text width is \SI{160}{\milli\meter}.
+\Glspl{star} spend most of their life on the \acrfull{ms}. The \acrshort{ms} was discovered when the \gls{luminosity} of many stars were plot against their spectral class. We can see this in Figure \ref{fig:example}. For good print quality, figures should be produced with at least 300 \acrfull{dpi}. To consistently achieve this, avoid resizing your images and produce them to this specification. Using A4 paper size with the default \texttt{uobthesis} class margins, the text width is \SI{160}{\milli\meter}.
 
 \begin{figure}[t]
   \centering
@@ -39,7 +41,7 @@ Quantities and their units can be formatted consistently with the \texttt{siunit
   \label{fig:example}
 \end{figure}
 
-Table \ref{tab:example} is completely unrelated to Figure \ref{fig:example} but we have thrown that in as another example. The table requires the \texttt{booktabs} package. This template stores figures and tables in separate folders. For your own sanity, consider keeping tables in separate files for your project. This makes them easy to update with new data.
+Table \ref{tab:example} is an example of a short table. The table requires the \texttt{booktabs} package. This template stores figures and tables in separate folders. For your own sanity, consider keeping tables in separate files for your project. This makes them easy to update with new data.
 
 \begin{table}
   \centering
@@ -67,7 +69,7 @@ A multi-line equation,
 %
 can be referenced to as Equations \ref{eq:int} and \ref{eq:sol}.
 
-Also, here is a vector written in an unnumbered equation,
+Finally, here is a vector written in an unnumbered equation,
 %
 \begin{equation*}
   \vec{a} \equiv \bm{a} = 
