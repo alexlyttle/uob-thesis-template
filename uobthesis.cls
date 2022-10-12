@@ -12,7 +12,7 @@
 % This work consists of the files uobthesis.cls, packages.sty, and thesis.tex.
 %
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{uobthesis}[2022/10/05 UoB Thesis Class]
+\ProvidesClass{uobthesis}[2022/10/12 v0.1 UoB thesis class]
 
 % Package for processing options
 \RequirePackage{xkeyval}
@@ -54,30 +54,25 @@
   % Title page
   \begin{titlepage}
     \noindent
-
     \begin{center}
-      \ifdefined\@logo
-        \includegraphics[width=90mm]{\@logo}%
-      \else
-        \hspace{0pt}%
+      \ifdefined\@logo%
+        % Logo size in line with university guidelines
+        \includegraphics[width=90mm]{\@logo}
+      \else%
+        \hspace{0pt}
       \fi
 
-      \vfill
+      \vfill\Large%
+      \MakeUppercase{\@title}
 
-      \Large\MakeUppercase{\@title}
-
-      \vspace{0.5cm}
-      \normalsize
+      \vspace{0.5cm}\normalsize%
       by
 
-      \vspace{0.5cm}
+      \vspace{0.5cm}%
       \Large\MakeUppercase{\@author}
 
-      \vfill
-      
-      \normalsize
-      A thesis submitted to the University of Birmingham for the degree of
-
+      \vfill\normalsize%
+      A thesis submitted to the University of Birmingham for the degree of\\
       \MakeUppercase{Doctor of Philosophy}
     \end{center}
 
@@ -122,11 +117,9 @@
   % Dedication
   \ifdefined\@dedication
     \thispagestyle{empty}
-    \hspace{0pt}
-    \vfill
+    \hspace{0pt}\vfill%
     \@dedication
-    \vfill
-    \hspace{0pt}
+    \vfill\hspace{0pt}
     \cleardoublepage
   \fi
 
