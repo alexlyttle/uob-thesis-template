@@ -13,7 +13,7 @@
 %% DEFINITION AND OPTIONS
 %
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{uobthesis}[2022/10/12 v1.0dev UoB thesis class]
+\ProvidesClass{uobthesis}[2022/10/12 v1.0 UoB thesis class]
 
 % Package for processing options
 \RequirePackage{xkeyval}
