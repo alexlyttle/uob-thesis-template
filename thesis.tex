@@ -9,8 +9,6 @@
 % https://www.latex-project.org/lppl.txt and version 1.3 or later is part of
 % all distributions of LaTeX version 2005/12/01 or later.
 %
-% This work consists of the files uobthesis.cls, packages.sty, and thesis.tex.
-%
 %
 %% PREAMBLE ===================================================================
 %
@@ -46,7 +44,7 @@
 \college{Your College}
 \submitted{March}{2022}  % Change this to the month you submit your thesis
 
-% Path to UoB logo file, download from 
+% Path to UoB logo file, downloaded from 
 % https://intranet.birmingham.ac.uk/staff/resources/brand-resources/university-logo-guidelines.aspx
 \logo{uob-logo.eps}  % Optional, comment this out if logo not wanted
 
@@ -54,7 +52,7 @@
 %% DEDICATION -----------------------------------------------------------------
 %
 % Optional dedication, edit this or comment out if not appropriate
-\dedication{Dedicated to my family.}
+\dedication{Dedicated to someone.}
 
 
 %% ABSTRACT -------------------------------------------------------------------
@@ -80,10 +78,10 @@
 
   %% CONTENTS -----------------------------------------------------------------
   \tableofcontents
-  \listoffigures
-  \listoftables
-  \printglossary[type=\acronymtype,title={List of Acronyms}]
-  \printglossary[title={List of Terms}]
+  \listoffigures                                              % Figures
+  \listoftables                                               % Tables
+  \printglossary[type=\acronymtype,title={List of Acronyms}]  % Acronyms
+  \printglossary[title={List of Terms}]                       % Terms
 
   \mainmatter
 
@@ -97,7 +95,7 @@
   %
   \printbibliography[title=References,heading=bibintoc]
 
-  %% APENDICES ----------------------------------------------------------------
+  %% APPENDICES ---------------------------------------------------------------
   %
   \appendix
 

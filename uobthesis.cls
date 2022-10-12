@@ -9,10 +9,11 @@
 % https://www.latex-project.org/lppl.txt and version 1.3 or later is part of
 % all distributions of LaTeX version 2005/12/01 or later.
 %
-% This work consists of the files uobthesis.cls, packages.sty, and thesis.tex.
+%
+%% DEFINITION AND OPTIONS
 %
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{uobthesis}[2022/10/12 v0.1 UoB thesis class]
+\ProvidesClass{uobthesis}[2022/10/12 v1.0dev UoB thesis class]
 
 % Package for processing options
 \RequirePackage{xkeyval}
@@ -26,8 +27,9 @@
 
 \LoadClass{\baseclass}
 
-% === GEOMETRY ===
 
+%% GEOMETRY
+%
 % Margins follow University guidelines
 % https://intranet.birmingham.ac.uk/as/libraryservices/library/research/thesis/Presenting-your-thesis.aspx
 \PassOptionsToPackage{%
@@ -40,8 +42,8 @@
 \RequirePackage{geometry}
 
 
-% === TITLE PAGE ===
-
+%% TITLE PAGE
+%
 \RequirePackage{graphicx}
 
 \newcommand*{\logo}[1]{\def\@logo{#1}}
@@ -98,8 +100,8 @@
 }
 
 
-% === FRONTMATTER ===
-
+%% FRONTMATTER
+%
 \newcommand*{\abstract}[1]{\def\@abstract{#1}}
 \newcommand*{\dedication}[1]{\def\@dedication{#1}}
 \newcommand*{\acknowledgements}[1]{\def\@acknowledgements{#1}}
