@@ -284,3 +284,6 @@ TSWLatexianTemp*
 
 # VS Code
 .vscode/
+
+# Build
+build/
