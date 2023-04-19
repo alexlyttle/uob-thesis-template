@@ -102,9 +102,9 @@
 
 %% FRONTMATTER
 %
-\newcommand*{\abstract}[1]{\def\@abstract{#1}}
-\newcommand*{\dedication}[1]{\def\@dedication{#1}}
-\newcommand*{\acknowledgements}[1]{\def\@acknowledgements{#1}}
+\newcommand{\abstract}[1]{\def\@abstract{#1}}
+\newcommand{\dedication}[1]{\def\@dedication{#1}}
+\newcommand{\acknowledgements}[1]{\def\@acknowledgements{#1}}
 
 \newcommand*{\abstractname}{Abstract}
 \newcommand*{\thanksname}{Acknowledgements}
