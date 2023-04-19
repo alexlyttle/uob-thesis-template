@@ -64,14 +64,14 @@
         \hspace{0pt}
       \fi
 
-      \vfill\Large%
-      \MakeUppercase{\@title}
+      \vfill\LARGE%
+      \MakeUppercase{\@title}%
 
       \vspace{0.5cm}\normalsize%
-      by
+      by\LARGE% FIX: Immediately switch back to large before new line 
 
       \vspace{0.5cm}%
-      \Large\MakeUppercase{\@author}
+      \MakeUppercase{\@author}%
 
       \vfill\normalsize%
       A thesis submitted to the University of Birmingham for the degree of\\
