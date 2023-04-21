@@ -52,6 +52,9 @@
 \newcommand*{\college}[1]{\def\@college{#1}}
 \newcommand*{\submitted}[2]{\def\@month{#1}\def\@year{#2}}
 
+\newcommand{\license}[1]{\def\@license{#1}}
+\license{All Rights Reserved.}
+
 \renewcommand*{\maketitle}{%
   % Title page
   \begin{titlepage}
@@ -95,7 +98,7 @@
   \vfill
   \begin{center}
     \copyright~Copyright by \MakeUppercase{\@author},~\@year\\
-    All Rights Reserved
+    \@license
   \end{center}
 }
 
