@@ -52,10 +52,13 @@
 \newcommand*{\college}[1]{\def\@college{#1}}
 \newcommand*{\submitted}[2]{\def\@month{#1}\def\@year{#2}}
 
+\newcommand{\license}[1]{\def\@license{#1}}
+\license{All Rights Reserved.}  % Default licesnse is "All Rights Reserved."
+
 \renewcommand*{\maketitle}{%
   % Title page
   \begin{titlepage}
-    \noindent
+    % \noindent
     \begin{center}
       \ifdefined\@logo%
         % Logo size in line with university guidelines
@@ -90,13 +93,14 @@
   \end{titlepage}
   
   % Copyright information
-  \thispagestyle{empty}
+  \thispagestyle{empty}{%
+  \setlength{\parindent}{0pt}  % No paragraph indentation
+  \singlespacing
   \hspace{0pt}
   \vfill
-  \begin{center}
-    \copyright~Copyright by \MakeUppercase{\@author},~\@year\\
-    All Rights Reserved
-  \end{center}
+  \copyright~Copyright by \MakeUppercase{\@author},~\@year
+
+  \@license}
 }
 
 
