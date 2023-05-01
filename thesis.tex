@@ -58,22 +58,6 @@
 % \license{Write custom license text here.}
 
 
-%% DEDICATION -----------------------------------------------------------------
-%
-% Optional dedication, edit this or comment out if not appropriate
-\dedication{Dedicated to someone.}
-
-
-%% ABSTRACT -------------------------------------------------------------------
-%
-\abstract{\lipsum[1-2]}
-
-
-%% ACKNOWLEDGEMENTS -----------------------------------------------------------
-%
-\acknowledgements{\lipsum[3-6]}
-
-
 %% DOCUMENT ===================================================================
 %
 \begin{document}
@@ -83,7 +67,11 @@
   \frontmatter
 
   %% FRONT MATTER -------------------------------------------------------------
-  \makefrontmatter  % Adds abstract, dedication and acknowledgements
+  %
+  \include{frontmatter/abstract}
+  \include{frontmatter/dedication}   % Optional dedication page
+  \include{frontmatter/acknowledge}
+  % Add any additional front matter below
 
   %% CONTENTS -----------------------------------------------------------------
   \tableofcontents
