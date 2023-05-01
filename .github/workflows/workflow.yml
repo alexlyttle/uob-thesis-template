@@ -30,23 +30,23 @@ jobs:
             pdflatex thesis
             pdflatex thesis
 
-  build:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+  # build:
+  #   # The type of runner that the job will run on
+  #   runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
+  #   # Steps represent a sequence of tasks that will be executed as part of the job
+  #   steps:
+  #     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+  #     - uses: actions/checkout@v3
       
-      - name: Install poppler-utils
-        run: sudo apt install poppler-utils
+  #     - name: Install poppler-utils
+  #       run: sudo apt install poppler-utils
 
-      # Generate preview image of PDF using poppler
-      - name: Generate preview image from PDF
-        run: pdftoppm -singlefile -png thesis.pdf preview
+  #     # Generate preview image of PDF using poppler
+  #     - name: Generate preview image from PDF
+  #       run: pdftoppm -singlefile -png thesis.pdf preview
 
-      - name: Add and Commit
-        uses: EndBug/add-and-commit@v9.1.0
-        with:
-          message: 'Update preview file'
+  #     - name: Add and Commit
+  #       uses: EndBug/add-and-commit@v9.1.0
+  #       with:
+  #         message: 'Update preview file'
