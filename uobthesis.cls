@@ -102,35 +102,3 @@
 
   \@license}
 }
-
-
-%% FRONTMATTER
-%
-\newcommand{\abstract}[1]{\def\@abstract{#1}}
-\newcommand{\dedication}[1]{\def\@dedication{#1}}
-\newcommand{\acknowledgements}[1]{\def\@acknowledgements{#1}}
-
-\newcommand*{\abstractname}{Abstract}
-\newcommand*{\thanksname}{Acknowledgements}
-
-\newcommand*{\makefrontmatter}{%
-  % Abstract
-  \chapter*{\abstractname}
-  \addcontentsline{toc}{chapter}{\abstractname}
-  \@abstract
-  \cleardoublepage
-
-  % Dedication
-  \ifdefined\@dedication
-    \thispagestyle{empty}
-    \hspace{0pt}\vfill%
-    \@dedication
-    \vfill\hspace{0pt}
-    \cleardoublepage
-  \fi
-
-  % Acknowledgements
-  \chapter*{\thanksname}
-  \addcontentsline{toc}{chapter}{\thanksname}
-  \@acknowledgements
-}
